@@ -1,0 +1,22 @@
+{
+  "name": "SignLanguage: Learn Sign language practically.",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "css": "npx tailwindcss -i ./style.css -o ./_site/css/styles.css --watch",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "alpinejs": "^3.10.3",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.3"
+  }
+}

@@ -1,0 +1,20 @@
+---
+title: 'SignLanguage: Learn Sign language practically'
+layout: 'layouts/base.njk'
+---
+
+{% include 'partials/_header.html' %}
+
+<section class="max-w-7xl mx-auto px-4 " >
+    <h1 class="py-6 rubik text-4xl font-bold" >Learn American Sign Language Practically.</h1>
+    {# cards #}
+    <div class="flex flex-wrap gap-4 ">
+        {# import card from component folder #}
+        {% import 'components/cards.njk' as macro  %}
+        {{ macro.card('bg-[#E8B6D2]','/app/phrases/index.html','Learn Phrases','English-American Sign Language dictionary contains video for over 100,000 words.','/assets/img/youtube.png') }}
+        {{ macro.card('bg-[#A0A6FF]','/app/playNumbers/index.html','Learn Numbers','Learn numbers from 0-10 in  chronological order with the help of artificial intelligence.','/assets/img/hell-yeah.png') }}
+        {{ macro.card('bg-[#F66A55]','/app/numbersQuiz/index.html','Random Numbers Game','Show your hands on screen and AI will try to predict the numbers from 0-10 based on your hand signs.','/assets/img/peace.png') }}
+        {# {{ macro.card('bg-[#72CAC3]','/','Learn Numbers','Learn numbers from 0-10 in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }}
+        {{ macro.card('bg-[#E7FF85]','/','Learn Numbers','Learn numbers from 0-10 in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }} #}
+    </div>
+</section>

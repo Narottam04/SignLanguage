@@ -1,0 +1,15 @@
+{% macro card(bgColor,link,heading,para,img) %}
+<div class="block p-6 max-w-xl {{bgColor}} rounded-lg border border-gray-200 shadow-md ">
+    <a href="{{link}}" class="flex ">
+        <div class="w-lg">
+            <h5 class="rubik mb-2 text-2xl font-bold tracking-tight  text-gray-900 dark:text-white ">{{heading}}</h5>
+            <p class="inter font-normal text-gray-700 dark:text-gray-400">
+                {{para}}
+            </p>
+        </div>
+        <div>
+            <img src="{{img}}" alt="peace sign" class="" >
+        </div>
+    </a>
+</div>
+{% endmacro %}

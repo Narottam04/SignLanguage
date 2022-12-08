@@ -1,0 +1,18 @@
+{% macro videoCard(thumbnail,title,videoUrl,date,duration) %}
+    <div id="card"  url={{videoUrl}} class="w-[80vw] md:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div>
+            <img class="rounded-t-lg w-full" src="{{thumbnail}}" alt="{{title}}" />
+        </div>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight capitalize  text-gray-900 dark:text-white">
+                    {{title}}
+                </h5>
+            </a>
+            {# <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> #}
+        </div>
+    </div>
+{% endmacro %}
+
+
+
