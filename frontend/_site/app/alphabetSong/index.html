@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css" ></link>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.5/plyr.css" />
-    <title>SignLanguage: English-American Sign Language dictionary contains video for over 100,000+ words.</title>
+    <title>SignLanguage: Learn Alphabets Through Songs</title>
 </head>
-<body class="">
-
+<body>
     <!-- navbar -->
 <nav
   class="px-2 py-4 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
@@ -185,30 +184,6 @@
   </div>
 </div>
 
-    
-    <section id="search-section" class="h-full  left-0 right-0 mx-auto">
-        <form class="w-[90vw] m-auto" autocomplete="off">   
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </div>
-                <input id="search-input" type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." autocomplete="off">
-                <button id="close-search" class="hidden text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 fill-white cursor-pointer">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-
-            </div> 
-        </form>
-
-        <div id="fuzzy-search" class="hidden w-[90vw] mx-auto bg-white mt-5 rounded-lg z-30">
-            
-            
-        </div>
-
-    </section>
 
     
     <section id="skeleton-cards" class="hidden flex justify-center align-center flex-wrap max-w-screen-xl mx-auto mt-10 gap-4">
@@ -369,21 +344,6 @@
     </section>
 
     
-    <section class="flex gap-4 justify-center mt-8">
-        <!-- Previous Button -->
-        <button id="previous-page" class="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-            <svg aria-hidden="true" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-            Previous
-        </button>
-        
-        <button id="next-page" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-            Next
-            <svg aria-hidden="true" class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-
-    </section>
-
-    
     <div id="vidModal" class="hidden z-50 absolute top-0 left-0 bg-black/40 w-full h-full">
         <div id="player" class="relative flex justify-center items-center h-screen">
             <div class="flex flex-col">
@@ -397,13 +357,9 @@
             </div>
         </div>
     </div>
-
     
-
 </body>
 <script src="/js/flowbite.js" defer></script>
 <script src="https://cdn.plyr.io/3.6.5/plyr.js" defer></script>
-<script type="module" src="/js/videoModal.js"></script>    
+<script type="module" src="/js/alphabetVideo.js"></script>   
 </html>
-
-

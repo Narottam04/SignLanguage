@@ -19,7 +19,7 @@ const fetchSearchAndDisplay = debounce(searchQuery => {
                 const markup = `
                     <div url=${vid.URL} class="flex gap-4">
                         <div url=${vid.URL} class="flex flex-col justify-center items-center p-2 w-40">
-                            <img url=${vid.URL} class="w-40" src=${vid.thumbnail} alt="${vid.title}" />
+                            <img width="150" src=${vid.thumbnail} alt="${vid.title}" />
                         </div>
     
                         <div url=${vid.URL} class="flex flex-col justify-center items-center py-2">

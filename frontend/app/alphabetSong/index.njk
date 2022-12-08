@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" ></link>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.5/plyr.css" />
+    <title>SignLanguage: Learn Alphabets Through Songs</title>
+</head>
+<body>
+    {% include 'partials/_header.html' %}
+
+    {# Skeleton Loading videos #}
+    <section id="skeleton-cards" class="hidden flex justify-center align-center flex-wrap max-w-screen-xl mx-auto mt-10 gap-4">
+        {% import 'components/skeletonCards.njk' as macro  %}
+
+        {% for i in range(0, 12) -%}
+            {{ macro.skeletonCard() }}
+        {%- endfor %}
+        
+    </section>
+    {# videos #}
+    <section id="paginated-video" class="flex justify-center align-center flex-wrap max-w-screen-xl mx-auto mt-10 gap-4">
+        {# add all videos through javascript #}
+
+        {# {% import 'components/videoCards.njk' as macro  %}
+        {{ macro.videoCard('https://i.ytimg.com/vi/ZTQ_eawsM6I/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgTShFMA8=&rs=AOn4CLDQyvCNxk1xBGv5Qp_e8y_hfOup2A','scads of fish,scads and scads of fish, scads and scads and scads of fish','https://www.youtube.com/watch?v=ZTQ_eawsM6I') }}
+
+        {{ macro.videoCard('https://i.ytimg.com/vi/m35OB8DkHqc/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARgtIFsocjAP&rs=AOn4CLAXGqKznMWmAxkUanu19Sn1cW9uhg','fire away-ask questions','https://www.youtube.com/watch?v=m35OB8DkHqc') }} #}
+    </section>
+
+    {# video modal #}
+    <div id="vidModal" class="hidden z-50 absolute top-0 left-0 bg-black/40 w-full h-full">
+        <div id="player" class="relative flex justify-center items-center h-screen">
+            <div class="flex flex-col">
+                <div class="flex justify-end">
+                    {# CLOSE ICON #}
+                    <svg id="modal-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="#FFFFFF" class="w-10 h-10 cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg> 
+                </div>
+                <iframe id="video" width="772" height="434" class="max-w-full h-auto aspect-video" src="" title="responsive iframe with aspect ratio css property" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="{{ "/js/flowbite.js" | url }}" defer></script>
+<script src="https://cdn.plyr.io/3.6.5/plyr.js" defer></script>
+<script type="module" src="/js/alphabetVideo.js"></script>   
+</html>
