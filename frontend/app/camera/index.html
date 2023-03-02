@@ -197,7 +197,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-    <script type="module" src="/js/playNumbers.js"></script>
+    <script type="module" src="/js/camera.js"></script>
   </head>
   <body>
     <div id="container">
@@ -210,12 +210,15 @@
         <div class="flex flex-col justify-center">
           <!-- <img src="/assets/asl_alphabets/Ahand.svg" alt="hello" class="h-28 md:h-40 "></img> -->
           <h1
-            id="increment-num"
+            id="random-num"
             class="text-center text-[3rem] md:text-[6rem] font-extrabold text-white font-white"
           ></h1>
           <h2 class="text-yellow-400 text-center text-2xl md:text-3xl font-bold">
             Show this Number
           </h2>
+          <h3 class="text-yellow-400 text-center text-xl md:text-2xl font-bold mt-2">
+            Score: <span id="score"></span>
+          </h3>
         </div>
       </div>
     </div>

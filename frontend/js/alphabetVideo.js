@@ -1,10 +1,5 @@
 const card = document.querySelectorAll("#card")
-const fuzzySearchModal = document.querySelectorAll("#fuzzy-search")
 const modalClose = document.querySelector("#modal-close")
-
-const searchSection = document.querySelector("#search-section")
-const searchInput = document.querySelector("#search-input")
-const fuzzySearch = document.querySelector("#fuzzy-search")
 
 
 
@@ -54,38 +49,6 @@ function fetchVideo(start) {
 }
 
 fetchVideo(start)
-
-// card.forEach(vid => {
-//     console.log(vid)
-//     vid.onclick = () => {
-//         document.querySelector('#vidModal').classList.remove('hidden')
-//         const url = vid.getAttribute('url')
-//         const videoId = url.split("=")[1]
-//         console.log(url, url.split("=")[1])
-//         document.querySelector('#video').src = `https://www.youtube.com/embed/${videoId}`
-//     }
-// })
-
-// pagination
-const nextPage = document.getElementById('next-page')
-const previousPage = document.getElementById('previous-page')
-
-nextPage.onclick = function nextPage() {
-    if(start < 20000){
-        start += 12
-        document.getElementById('paginated-video').innerHTML= ""
-        fetchVideo(start)    
-    }
-}
-
-
-previousPage.onclick = function previousPage() {
-    if(start != 0){
-        start -= 12 
-        document.getElementById('paginated-video').innerHTML= ""
-        fetchVideo(start)    
-    }
-}
 
 // close video modal
 modalClose.onclick = () => {
