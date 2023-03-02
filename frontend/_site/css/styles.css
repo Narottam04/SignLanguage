@@ -1142,14 +1142,6 @@ input:checked + .toggle-bg{
   right: 0px;
 }
 
-.bottom-0{
-  bottom: 0px;
-}
-
-.bottom-10{
-  bottom: 2.5rem;
-}
-
 .bottom-2\.5{
   bottom: 0.625rem;
 }
@@ -1162,6 +1154,10 @@ input:checked + .toggle-bg{
   bottom: 60px;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
 .z-40{
   z-index: 40;
 }
@@ -1170,16 +1166,16 @@ input:checked + .toggle-bg{
   z-index: 50;
 }
 
-.z-10{
-  z-index: 10;
-}
-
 .z-30{
   z-index: 30;
 }
 
 .z-20{
   z-index: 20;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .m-auto{
@@ -1215,6 +1211,10 @@ input:checked + .toggle-bg{
   margin-bottom: 0.625rem;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -1231,20 +1231,8 @@ input:checked + .toggle-bg{
   margin-left: 0.5rem;
 }
 
-.mt-2{
-  margin-top: 0.5rem;
-}
-
 .mb-1{
   margin-bottom: 0.25rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
-}
-
-.mt-40{
-  margin-top: 10rem;
 }
 
 .block{
@@ -1319,20 +1307,16 @@ input:checked + .toggle-bg{
   height: auto;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .h-9{
   height: 2.25rem;
 }
 
 .h-4{
   height: 1rem;
-}
-
-.h-20{
-  height: 5rem;
-}
-
-.h-28{
-  height: 7rem;
 }
 
 .w-6{
@@ -1377,10 +1361,6 @@ input:checked + .toggle-bg{
 
 .w-4{
   width: 1rem;
-}
-
-.w-20{
-  width: 5rem;
 }
 
 .max-w-7xl{
@@ -1479,10 +1459,6 @@ input:checked + .toggle-bg{
 
 .flex-wrap{
   flex-wrap: wrap;
-}
-
-.content-center{
-  align-content: center;
 }
 
 .items-start{
@@ -1585,11 +1561,6 @@ input:checked + .toggle-bg{
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
-.border-yellow-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(252 233 106 / var(--tw-border-opacity));
-}
-
 .border-gray-300{
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1685,11 +1656,6 @@ input:checked + .toggle-bg{
   fill: #ffffff;
 }
 
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-4{
   padding: 1rem;
 }
@@ -1743,11 +1709,6 @@ input:checked + .toggle-bg{
   padding-bottom: 1.5rem;
 }
 
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1769,10 +1730,6 @@ input:checked + .toggle-bg{
 
 .pl-3{
   padding-left: 0.75rem;
-}
-
-.pt-4{
-  padding-top: 1rem;
 }
 
 .pl-10{
@@ -1812,26 +1769,13 @@ input:checked + .toggle-bg{
   line-height: 2rem;
 }
 
-.text-\[4rem\]{
-  font-size: 4rem;
+.text-\[3rem\]{
+  font-size: 3rem;
 }
 
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-\[2rem\]{
-  font-size: 2rem;
-}
-
-.text-\[3rem\]{
-  font-size: 3rem;
 }
 
 .font-semibold{
@@ -1900,19 +1844,14 @@ input:checked + .toggle-bg{
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
-.text-yellow-200{
+.text-yellow-400{
   --tw-text-opacity: 1;
-  color: rgb(252 233 106 / var(--tw-text-opacity));
+  color: rgb(227 160 8 / var(--tw-text-opacity));
 }
 
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
-}
-
-.text-yellow-400{
-  --tw-text-opacity: 1;
-  color: rgb(227 160 8 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -2273,23 +2212,18 @@ input:checked + .toggle-bg{
     line-height: 1.25rem;
   }
 
-  .md\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .md\:text-\[6rem\]{
     font-size: 6rem;
-  }
-
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:font-medium{
