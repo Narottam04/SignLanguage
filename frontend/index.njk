@@ -15,15 +15,39 @@ layout: 'layouts/base.njk'
         {{ macro.card('bg-[#FFC72E]','/app/alphabetSong/index.html','Alphabet Songs','Learn alphabets through songs from Jack Hartmann Kids Music Channel ','/assets/img/peace.png' ) }}
     </div>
 
-    <h1 class="py-6 rubik text-4xl font-bold" >ASL Games.</h1>
+    <h1 class="py-6 rubik text-4xl font-bold" >ASL Basic Curriculum</h1>
     {# cards #}
-    <div class="flex flex-wrap gap-4 ">
+    <div class="flex flex-wrap gap-4 mb-8">
         {# import card from component folder #}
         {% import 'components/cards.njk' as macro  %}
         {# {{ macro.card('bg-[#E8B6D2]','/app/phrases/index.html','Learn Phrases','English-American Sign Language dictionary contains video for over 100,000 words.','/assets/img/youtube.png') }} #}
         {{ macro.card('bg-[#A0A6FF]','/app/playNumbers/index.html','Learn Numbers','Learn numbers from 0-10 in  chronological order with the help of artificial intelligence.','/assets/img/hell-yeah.png') }}
-        {{ macro.card('bg-[#F66A55]','/app/numbersQuiz/index.html','Random Numbers Game','Show your hands on screen and AI will try to predict the numbers from 0-10 based on your hand signs.','/assets/img/peace.png') }}
-        {# {{ macro.card('bg-[#72CAC3]','/','Learn Numbers','Learn numbers from 0-10 in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }}
-        {{ macro.card('bg-[#E7FF85]','/','Learn Numbers','Learn numbers from 0-10 in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }} #}
+
+        {# {{ macro.card('bg-[#F66A55]','/app/numbersQuiz/index.html','Random Numbers Game','Show your hands on screen and AI will try to predict the numbers from 0-10 based on your hand signs.','/assets/img/peace.png') }} #}
+
+        {{ macro.card('bg-[#A0A6FF]','/app/numbersQuiz/index.html','Random Numbers Quiz','Show your hands on screen and AI will try to predict the numbers from 0-10 based on your hand signs.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#72CAC3]','/app/playAlphabet-A-F/index.html','Learn Alphabets A-F','Learn alphabets from A-F in  chronological order with the help of artificial intelligence.','/assets/img/a-f.png') }}
+
+        {{ macro.card('bg-[#72CAC3]','/app/alphabetQuiz-A-F/index.html','Alphabets Quiz A-F','Learn alphabets from A-F in random order with the help of artificial intelligence quiz.','/assets/img/a-f.png') }}
+
+        {{ macro.card('bg-[#F9DBBB]','/app/playAlphabet-G-K/index.html','Learn Alphabets G-K','Learn alphabets from G-K in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#F9DBBB]','/app/alphabetQuiz-G-K/index.html','Alphabets Quiz G-K','Learn alphabets from G-K in  random order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#FDD36A]','/app/playAlphabet-L-P/index.html','Learn Alphabets L-P','Learn alphabets from L-P in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#FDD36A]','/app/alphabetQuiz-L-P/index.html','Alphabets Quiz L-P','Learn alphabets from L-P in  random order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#9DC08B]','/app/playAlphabet-Q-U/index.html','Learn Alphabets Q-U','Learn alphabets from Q-U in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#9DC08B]','/app/alphabetQuiz-Q-U/index.html','Alphabets Quiz Q-U','Learn alphabets from Q-U in  random order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#F7C8E0]','/app/playAlphabet-V-Z/index.html','Learn Alphabets V-Z','Learn alphabets from V-Z in  chronological order with the help of artificial intelligence.','/assets/img/peace.png') }}
+
+        {{ macro.card('bg-[#F7C8E0]','/app/alphabetQuiz-V-Z/index.html','Alphabets Quiz V-Z','Learn alphabets from V-Z in  random order with the help of artificial intelligence.','/assets/img/peace.png') }}
+        
     </div>
+
+    {# <h1 class="py-6 rubik text-4xl font-bold" >ASL Games</h1> #}
 </section>
