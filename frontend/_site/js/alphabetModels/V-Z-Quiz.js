@@ -15,7 +15,7 @@ const scoreSpan = document.getElementById("score");
 scoreSpan.innerHTML = `${score}`;
 
 const outputImg = document.getElementById("output-img");
-outputImg.src = `/assets/asl_alphabets/${alphabet[alphabetIdx]}hand.svg`;
+outputImg.src = `/assets/asl_alphabets/${alphabet[alphabetIdx]}.svg`;
 
 function calc_landmark_list(imgWidth, imgHeight, landmarks) {
   const landmarkArray = landmarks.map((landmark) => {
@@ -98,7 +98,7 @@ function onResults(results) {
       score += 5;
       scoreSpan.innerHTML = `${score}`;
       alphabetIdx = Math.floor(Math.random() * alphabet.length);
-      outputImg.src = `/assets/asl_alphabets/${alphabet[alphabetIdx]}hand.svg`;
+      outputImg.src = `/assets/asl_alphabets/${alphabet[alphabetIdx]}.svg`;
     }
     if (score !== 0 && score % 50 === 0) {
       confetti.addConfetti({
@@ -108,7 +108,7 @@ function onResults(results) {
         emojis: ["⚡️", "💥", "✨", "💫", "🌸"]
       });
       alphabetIdx = 0;
-      outputImg.src = `/assets/asl_alphabets/${alphabet[0]}hand.svg`;
+      outputImg.src = `/assets/asl_alphabets/${alphabet[0]}.svg`;
     }
   }
   canvasCtx.restore();
