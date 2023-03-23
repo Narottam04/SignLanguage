@@ -2,8 +2,10 @@ const confetti = new window.JSConfetti();
 
 var constraints = { video: { facingMode: "user" }, audio: false };
 
+const loader = document.querySelector("#loader");
 const videoElement = document.querySelector("#video");
 const canvasElement = document.querySelector("#output-canvas");
+
 const canvasCtx = canvasElement.getContext("2d");
 
 // Incremental Numbers
@@ -132,6 +134,8 @@ const hands = new Hands({
 });
 
 let customModel = null;
+let camera = null;
+let loading = false;
 
 hands.setOptions({
   maxNumHands: 1,
@@ -142,18 +146,24 @@ hands.setOptions({
 });
 hands.onResults(onResults);
 
-async function loadModel() {
-  customModel = await tf.loadLayersModel(
-    "https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_alphabets_A-F/model.json"
-  );
+function loadAndRunModel() {
+  async function loadModel() {
+    customModel = await tf.loadLayersModel(
+      "https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_alphabets_A-F/model.json"
+    );
+  }
+
+  loadModel();
+
+  camera = new Camera(videoElement, {
+    onFrame: async () => {
+      await hands.send({ image: videoElement });
+    }
+  });
+
+  camera.start();
+
+  // loader.classList.add("hidden");
 }
 
-loadModel();
-
-const camera = new Camera(videoElement, {
-  onFrame: async () => {
-    await hands.send({ image: videoElement });
-  }
-});
-
-camera.start();
+loadAndRunModel();

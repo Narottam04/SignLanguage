@@ -1,0 +1,30 @@
+---
+title: "SignLanguage: Learn Sign language practically"
+js: "/js/alphabetModels/L-P-Sequential.js"
+layout: "layouts/alphabetNumberModel.njk"
+---
+
+<div id="container">
+  <!-- cute loader -->
+  <div id="loader" class="flex h-screen w-screen flex-col content-center justify-center">
+    <div class="loader mx-auto"></div>
+    <h1 class="rubik mx-auto mt-4 text-xl font-bold text-white">
+      Preparing Learning Environment...
+    </h1>
+    <p class="inter text- mx-auto mt-2 text-center text-gray-300">
+      It can take a minute if you are starting it for first time. <br />
+      Please allow and check your camera access.
+    </p>
+  </div>
+  <div id="vid_container">
+    <video id="video" class="hidden" autoplay playsinline></video>
+    <canvas id="output-canvas"></canvas>
+    <div id="video_overlay"></div>
+  </div>
+  <div id="gui_controls" class="flex flex-col justify-center">
+    <div class="flex flex-col justify-center">
+      <img id="output-img" src="/assets/asl_alphabets/Lhand.svg" alt="hello" class="h-28 md:h-40" />
+      <h2 class="text-center text-2xl font-bold text-yellow-400 md:text-3xl">Show this Alphabet</h2>
+    </div>
+  </div>
+</div>

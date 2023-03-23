@@ -129,7 +129,7 @@
 
         #gui_controls {
           width: 100%;
-          height: 20%;
+          height: 24%;
           left: 0;
         }
 
@@ -176,9 +176,70 @@
           top: calc(82% - 32px);
         }
       }
+      /* cute css loader */
+      .loader {
+        width: 160px;
+        height: 185px;
+        position: relative;
+        background: #fff;
+        border-radius: 100px 100px 0 0;
+      }
+      .loader:after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 125px;
+        left: 50%;
+        top: 25px;
+        transform: translateX(-50%);
+        background-image: radial-gradient(circle, #000 48%, transparent 55%),
+          radial-gradient(circle, #000 48%, transparent 55%),
+          radial-gradient(circle, #fff 30%, transparent 45%),
+          radial-gradient(circle, #000 48%, transparent 51%),
+          linear-gradient(#000 20px, transparent 0), linear-gradient(#cfecf9 60px, transparent 0),
+          radial-gradient(circle, #cfecf9 50%, transparent 51%),
+          radial-gradient(circle, #cfecf9 50%, transparent 51%);
+        background-repeat: no-repeat;
+        background-size: 16px 16px, 16px 16px, 10px 10px, 42px 42px, 12px 3px, 50px 25px, 70px 70px,
+          70px 70px;
+        background-position: 25px 10px, 55px 10px, 36px 44px, 50% 30px, 50% 85px, 50% 50px, 50% 22px,
+          50% 45px;
+        animation: faceLift 3s linear infinite alternate;
+      }
+      .loader:before {
+        content: "";
+        position: absolute;
+        width: 140%;
+        height: 125px;
+        left: -20%;
+        top: 0;
+        background-image: radial-gradient(circle, #fff 48%, transparent 50%),
+          radial-gradient(circle, #fff 48%, transparent 50%);
+        background-repeat: no-repeat;
+        background-size: 65px 65px;
+        background-position: 0px 12px, 145px 12px;
+        animation: earLift 3s linear infinite alternate;
+      }
+
+      @keyframes faceLift {
+        0% {
+          transform: translateX(-60%);
+        }
+        100% {
+          transform: translateX(-30%);
+        }
+      }
+      @keyframes earLift {
+        0% {
+          transform: translateX(10px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
     </style>
     <!-- tailwind css -->
-    <link rel="stylesheet" href="/css/styles.css"></link>
+    <link rel="stylesheet" href="/css/styles.css" />
     <!-- mediapipe and tensorflow library -->
     <script
       src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
@@ -197,27 +258,43 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-    <script type="module" src="/js/alphabetModels/Q-U-Quiz.js"></script>
+    <script type="module" src=/js/alphabetModels/Q-U-Quiz.js></script>
   </head>
   <body>
-    <div id="container">
-      <div id="vid_container">
-        <video id="video" class="hidden" autoplay playsinline></video>
-        <canvas id="output-canvas"></canvas>
-        <div id="video_overlay"></div>
-      </div>
-      <div id="gui_controls" class="flex flex-col justify-center">
-        <div class="flex flex-col justify-center ">
-          <img id="output-img" src="/assets/asl_alphabets/Q.svg" alt="hello" class="h-12 md:h-24 mb-4 "></img>
-          <h2 class="text-yellow-400 text-center text-xl md:text-2xl font-bold">
-            Show this Alphabet
-          </h2>
-          <h3 class="text-yellow-400 text-center text-xl md:text-2xl font-bold md:mt-2">
-            Score: <span id="score"></span>
-          </h3>
-        </div>
-      </div>
+    
+<div id="container">
+  <!-- cute loader -->
+  <div id="loader" class="flex h-screen w-screen flex-col content-center justify-center">
+    <div class="loader mx-auto"></div>
+    <h1 class="rubik mx-auto mt-4 text-xl font-bold text-white">
+      Preparing Learning Environment...
+    </h1>
+    <p class="inter text- mx-auto mt-2 text-center text-gray-300">
+      It can take a minute if you are starting it for first time. <br />
+      Please allow and check your camera access.
+    </p>
+  </div>
+  <div id="vid_container">
+    <video id="video" class="hidden" autoplay playsinline></video>
+    <canvas id="output-canvas"></canvas>
+    <div id="video_overlay"></div>
+  </div>
+  <div id="gui_controls" class="flex flex-col justify-center">
+    <div class="flex flex-col justify-center">
+      <img
+        id="output-img"
+        src="/assets/asl_alphabets/Q.svg"
+        alt="hello"
+        class="mb-4 h-12 md:h-24"
+      />
+      <h2 class="text-center text-xl font-bold text-yellow-400 md:text-2xl">Show this Alphabet</h2>
+      <h3 class="text-center text-xl font-bold text-yellow-400 md:mt-2 md:text-2xl">
+        Score: <span id="score"></span>
+      </h3>
     </div>
+  </div>
+</div>
+
   </body>
   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </html>
