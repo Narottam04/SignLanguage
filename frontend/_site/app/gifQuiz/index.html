@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>American Sign Language Quiz Game</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <style>
+      #container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 36px;
+        margin-top: 30px;
+      }
+      
+      #quiz {
+        margin-top: 50px;
+      }
+      
+      #question {
+        margin-bottom: 20px;
+      }
+      
+      #question p {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      #question img {
+        width: 500px;
+        height: 400px;
+        margin-bottom: 20px;
+      }
+      
+      .answers {
+        display: flex;
+        justify-content: center;
+      }
+      
+      label {
+        display: block;
+        margin-right: 20px;
+      }
+      
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+      
+      #score {
+        font-size: 24px;
+        margin-top: 50px;
+      }
+      
+      #submit {
+        font-size: 20px;
+        margin-top: 50px;
+        padding: 10px 20px;
+        background-color: #008CBA;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      #submit:hover {
+        background-color: #006F8E;
+      }
+      
+    </style>
+    <script src="/js/gifQuiz.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Quiz Game</h1>
+      <div id="quiz">
+        <div id="question">
+          <p>Question 1:</p>
+          <img src="/assets/gifQuiz/a.jpg">
+          <div class="answers">
+            <label>
+              <input type="radio" name="q1" value="a">
+              Option A
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b">
+              Option B
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c">
+              Option C
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d">
+              Option D
+            </label>
+          </div>
+        </div>
+        <!-- Repeat question div for each question -->
+      </div>
+      <div id="score">Score</div>
+      <button id="submit">Submit</button>
+    </div>
+    <script>
+      
+    </script>
+  </body>
+</html>
