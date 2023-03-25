@@ -3,6 +3,8 @@ const confetti = new window.JSConfetti();
 var constraints = { video: { facingMode: "user" }, audio: false };
 
 const loader = document.querySelector("#loader");
+const correctAns = document.querySelector("#correct-ans");
+const showNum = document.querySelector("#show-num");
 const videoElement = document.querySelector("#video");
 const canvasElement = document.querySelector("#output-canvas");
 
@@ -97,6 +99,14 @@ function onResults(results) {
     // console.log(alphabet.length);
     // showPredection.innerHTML = `${gestureIndex}`;
     if (gestureIndex === alphabetIdx) {
+      showNum.classList.add("hidden");
+      correctAns.classList.remove("hidden");
+
+      setTimeout(() => {
+        correctAns.classList.add("hidden");
+        showNum.classList.remove("hidden");
+      }, 1000);
+
       score += 5;
       scoreSpan.innerHTML = `${score}`;
       alphabetIdx = Math.floor(Math.random() * alphabet.length);
@@ -109,6 +119,7 @@ function onResults(results) {
       confetti.addConfetti({
         emojis: ["⚡️", "💥", "✨", "💫", "🌸"]
       });
+
       alphabetIdx = 0;
       outputImg.src = `/assets/asl_alphabets/${alphabet[0]}.svg`;
     }

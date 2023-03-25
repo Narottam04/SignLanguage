@@ -1,6 +1,6 @@
 ---
 title: "SignLanguage: Learn Sign language practically"
-js: "/js/alphabetModels/Q-U-Sequential.js"
+js: "/js/alphabetModels/L-P-Quiz.js"
 layout: "layouts/alphabetNumberModel.njk"
 ---
 
@@ -22,9 +22,26 @@ layout: "layouts/alphabetNumberModel.njk"
     <div id="video_overlay"></div>
   </div>
   <div id="gui_controls" class="flex flex-col justify-center">
-    <div class="flex flex-col justify-center">
-      <img id="output-img" src="/assets/asl_alphabets/Qhand.svg" alt="hello" class="h-28 md:h-40" />
-      <h2 class="text-center text-2xl font-bold text-yellow-400 md:text-3xl">Show this Alphabet</h2>
+    <div id="correct-ans" class="flex hidden flex-col justify-center">
+      <img src="/assets/icon/done-128.svg" alt="Correct Answer" class="h-20" />
+      <h2 class="mt-4 text-center text-2xl font-bold text-green-400 md:text-3xl">Good Work!!</h2>
+    </div>
+
+    <div id="show-num">
+      <div class="flex flex-col justify-center">
+        <img
+          id="output-img"
+          src="/assets/asl_alphabets/L.svg"
+          alt="hello"
+          class="mx-auto mb-4 h-12 md:h-24"
+        />
+        <h2 class="text-center text-xl font-bold text-yellow-400 md:text-2xl">
+          Show this Alphabet
+        </h2>
+        <h3 class="text-center text-xl font-bold text-yellow-400 md:mt-2 md:text-2xl">
+          Score: <span id="score"></span>
+        </h3>
+      </div>
     </div>
   </div>
 </div>

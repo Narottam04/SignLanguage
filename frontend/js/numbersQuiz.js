@@ -3,6 +3,8 @@ const confetti = new window.JSConfetti();
 var constraints = { video: { facingMode: "user" }, audio: false };
 
 const videoElement = document.querySelector("#video");
+const correctAns = document.querySelector("#correct-ans");
+const showNum = document.querySelector("#show-num");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
@@ -93,6 +95,14 @@ function onResults(results) {
     console.log(gestureIndex);
     // showPredection.innerHTML = `${gestureIndex}`;
     if (gestureIndex === number) {
+      showNum.classList.add("hidden");
+      correctAns.classList.remove("hidden");
+
+      setTimeout(() => {
+        correctAns.classList.add("hidden");
+        showNum.classList.remove("hidden");
+      }, 1000);
+
       score += 5;
       scoreSpan.innerHTML = `${score}`;
       number = Math.floor(Math.random() * 10);

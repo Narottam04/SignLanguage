@@ -3,6 +3,8 @@ const confetti = new window.JSConfetti();
 var constraints = { video: { facingMode: "user" }, audio: false };
 
 const videoElement = document.querySelector("#video");
+const correctAns = document.querySelector("#correct-ans");
+const showNum = document.querySelector("#show-num");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
@@ -86,12 +88,30 @@ function onResults(results) {
 
     const gestureIndex = predict.indexOf(gesture);
     console.log(gestureIndex);
+
     // showPredection.innerHTML = `${gestureIndex}`;
     if (gestureIndex === number && number < 10) {
+      showNum.classList.add("hidden");
+      correctAns.classList.remove("hidden");
+
+      setTimeout(() => {
+        correctAns.classList.add("hidden");
+        showNum.classList.remove("hidden");
+      }, 1000);
+
       number += 1;
       incrementalNum.innerHTML = `${number}`;
     }
+
     if (gestureIndex === number && number === 10) {
+      showNum.classList.add("hidden");
+      correctAns.classList.remove("hidden");
+
+      setTimeout(() => {
+        correctAns.classList.add("hidden");
+        showNum.classList.remove("hidden");
+      }, 1000);
+
       confetti.addConfetti({
         confettiColors: ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#fbb1bd", "#f9bec7"]
       });

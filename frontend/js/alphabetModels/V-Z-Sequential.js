@@ -3,6 +3,8 @@ const confetti = new window.JSConfetti();
 var constraints = { video: { facingMode: "user" }, audio: false };
 
 const videoElement = document.querySelector("#video");
+const correctAns = document.querySelector("#correct-ans");
+const showNum = document.querySelector("#show-num");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
@@ -89,16 +91,33 @@ function onResults(results) {
     // console.log(alphabet.length);
     // showPredection.innerHTML = `${gestureIndex}`;
     if (gestureIndex === alphabetIdx && alphabetIdx < alphabet.length - 1) {
+      showNum.classList.add("hidden");
+      correctAns.classList.remove("hidden");
+
+      setTimeout(() => {
+        correctAns.classList.add("hidden");
+        showNum.classList.remove("hidden");
+      }, 1000);
+
       alphabetIdx += 1;
       outputImg.src = `/assets/asl_alphabets/${alphabet[alphabetIdx]}hand.svg`;
     }
     if (gestureIndex === alphabetIdx && alphabetIdx === alphabet.length - 1) {
+      showNum.classList.add("hidden");
+      correctAns.classList.remove("hidden");
+
       confetti.addConfetti({
         confettiColors: ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#fbb1bd", "#f9bec7"]
       });
       confetti.addConfetti({
         emojis: ["⚡️", "💥", "✨", "💫", "🌸"]
       });
+
+      setTimeout(() => {
+        correctAns.classList.add("hidden");
+        showNum.classList.remove("hidden");
+      }, 1000);
+
       alphabetIdx = 0;
       outputImg.src = `/assets/asl_alphabets/${alphabet[0]}hand.svg`;
     }
