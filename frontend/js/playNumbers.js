@@ -4,6 +4,7 @@ var constraints = { video: { facingMode: "user" }, audio: false };
 
 const videoElement = document.querySelector("#video");
 const correctAns = document.querySelector("#correct-ans");
+const answerImg = document.querySelector("#answer-img");
 const showNum = document.querySelector("#show-num");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
@@ -100,6 +101,8 @@ function onResults(results) {
       }, 1000);
 
       number += 1;
+
+      answerImg.src = `/assets/asl_numbers/hand_signs/${number}.png`;
       incrementalNum.innerHTML = `${number}`;
     }
 
@@ -119,6 +122,8 @@ function onResults(results) {
         emojis: ["⚡️", "💥", "✨", "💫", "🌸"]
       });
       number = 0;
+
+      answerImg.src = `/assets/asl_numbers/hand_signs/${number}.png`;
       incrementalNum.innerHTML = `${number}`;
     }
     // console.log(gestureIndex)
