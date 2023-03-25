@@ -1,16 +1,9 @@
 <!-- navbar -->
-<nav
-  class="px-2 py-4 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
->
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
+<nav class="border-gray-200 bg-white px-2 py-4 dark:border-gray-700 dark:bg-gray-900">
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
     <a href="/" class="flex items-center">
-      <img
-        src="https://img.icons8.com/hands/100/000000/experimental-hand-peace-hands.png"
-        class="mr-3 h-6 sm:h-10"
-        alt="SignLanguage"
-      />
-      <span
-        class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+      <img src="/assets/logo/kawaii-panda.png" class="mr-3 h-6 sm:h-10" alt="SignLanguage" />
+      <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
         >SignLanguage</span
       >
     </a>
@@ -20,11 +13,11 @@
       data-drawer-show="drawer-navigation"
       aria-controls="drawer-navigation"
       type="button"
-      class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500"
+      class="ml-3 inline-flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500 md:hidden"
     >
       <span class="sr-only">Open main menu</span>
       <svg
-        class="w-6 h-6"
+        class="h-6 w-6"
         aria-hidden="true"
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -39,12 +32,12 @@
     </button>
     <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
       <ul
-        class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium md:dark:bg-gray-900"
       >
         <li>
           <a
             href="/"
-            class="block py-2 pr-4 pl-3 text-xl text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
+            class="block rounded bg-blue-700 py-2 pr-4 pl-3 text-xl text-white dark:bg-blue-600 md:bg-transparent md:p-0 md:text-blue-700 md:dark:bg-transparent md:dark:text-white"
             aria-current="page"
             >App</a
           >
@@ -52,7 +45,7 @@
         <li>
           <a
             href="/app/phrases/index.html"
-            class="block py-2 pr-4 pl-3 text-xl text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            class="block rounded py-2 pr-4 pl-3 text-xl text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
             >Dictionary</a
           >
         </li>
@@ -60,7 +53,7 @@
           <a
             href="https://dev.to/narottam04/signlanguage-learn-asl-practically-mongodb-atlas-hackathon-2022-submission-2cl7"
             target="_blank"
-            class="block py-2 pr-4 pl-3 text-xl text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            class="block rounded py-2 pr-4 pl-3 text-xl text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
             >Features</a
           >
         </li>
@@ -73,9 +66,9 @@
         </li> -->
         <li>
           <a
-            href="https://www.buymeacoffee.com/narottam" 
+            href="https://www.buymeacoffee.com/narottam"
             target="_blank"
-            class="block py-2 pr-4 pl-3 text-xl text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            class="block rounded py-2 pr-4 pl-3 text-xl text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
             >Support</a
           >
         </li>
@@ -83,7 +76,7 @@
           <a
             href="https://github.com/Narottam04/SignLanguage"
             target="_blank"
-            class="block py-2 pr-4 pl-3 text-xl text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            class="block rounded py-2 pr-4 pl-3 text-xl text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
             >Contribute</a
           >
         </li>
@@ -95,13 +88,13 @@
 <!-- drawer component -->
 <div
   id="drawer-navigation"
-  class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800"
+  class="fixed z-40 h-screen w-80 overflow-y-auto bg-white p-4 dark:bg-gray-800"
   tabindex="-1"
   aria-labelledby="drawer-navigation-label"
 >
   <h5
     id="drawer-navigation-label"
-    class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+    class="text-base font-semibold uppercase text-gray-500 dark:text-gray-400"
   >
     Menu
   </h5>
@@ -109,11 +102,11 @@
     type="button"
     data-drawer-dismiss="drawer-navigation"
     aria-controls="drawer-navigation"
-    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+    class="absolute top-2.5 right-2.5 inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
   >
     <svg
       aria-hidden="true"
-      class="w-5 h-5"
+      class="h-5 w-5"
       fill="currentColor"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
@@ -126,12 +119,12 @@
     </svg>
     <span class="sr-only">Close menu</span>
   </button>
-  <div class="py-4 overflow-y-auto">
+  <div class="overflow-y-auto py-4">
     <ul class="space-y-2">
       <li>
         <a
           href="/"
-          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <span class="ml-3">Home</span>
         </a>
@@ -139,7 +132,7 @@
       <li>
         <a
           href="/app/phrases/index.html"
-          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <span class="ml-3">Dictionary</span>
         </a>
@@ -147,16 +140,16 @@
       <li>
         <a
           href="#"
-          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <span class="ml-3">Features</span>
         </a>
       </li>
       <li>
         <a
-          href="https://www.buymeacoffee.com/narottam" 
+          href="https://www.buymeacoffee.com/narottam"
           target="_blank"
-          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <span class="ml-3">Support</span>
         </a>
@@ -165,7 +158,7 @@
         <a
           href="https://github.com/Narottam04/SignLanguage"
           target="_blank"
-          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <span class="ml-3">Contribute</span>
         </a>
