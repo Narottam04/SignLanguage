@@ -1291,6 +1291,10 @@ input:checked + .toggle-bg{
   height: 1.25rem;
 }
 
+.h-20{
+  height: 5rem;
+}
+
 .h-12{
   height: 3rem;
 }
@@ -1325,10 +1329,6 @@ input:checked + .toggle-bg{
 
 .h-4{
   height: 1rem;
-}
-
-.h-20{
-  height: 5rem;
 }
 
 .w-6{
@@ -1381,10 +1381,6 @@ input:checked + .toggle-bg{
 
 .w-4{
   width: 1rem;
-}
-
-.w-20{
-  width: 5rem;
 }
 
 .max-w-7xl{
@@ -1897,6 +1893,11 @@ input:checked + .toggle-bg{
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.text-green-400{
+  --tw-text-opacity: 1;
+  color: rgb(49 196 141 / var(--tw-text-opacity));
+}
+
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(227 160 8 / var(--tw-text-opacity));
@@ -1910,11 +1911,6 @@ input:checked + .toggle-bg{
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
-}
-
-.text-green-400{
-  --tw-text-opacity: 1;
-  color: rgb(49 196 141 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -2283,6 +2279,11 @@ input:checked + .toggle-bg{
     line-height: 1.25rem;
   }
 
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2290,11 +2291,6 @@ input:checked + .toggle-bg{
 
   .md\:text-\[6rem\]{
     font-size: 6rem;
-  }
-
-  .md\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .md\:font-medium{
