@@ -19,7 +19,7 @@ function calc_landmark_list(imgWidth, imgHeight, landmarks) {
     const landmark_X = Math.round(Math.min(landmark.x * imgWidth, imgWidth - 1));
     const landmark_Y = Math.round(Math.min(landmark.y * imgHeight, imgHeight - 1));
     return [landmark_X, landmark_Y];
-  });
+  }); 
 
   return landmarkArray;
 }
