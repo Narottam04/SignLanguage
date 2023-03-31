@@ -6,6 +6,8 @@ const videoElement = document.querySelector("#video");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
+let alphabets = ["L", "M", "N", "O", "P"];
+
 function calc_landmark_list(imgWidth, imgHeight, landmarks) {
   const landmarkArray = landmarks.map((landmark) => {
     const landmark_X = Math.round(Math.min(landmark.x * imgWidth, imgWidth - 1));
@@ -80,9 +82,9 @@ function onResults(results) {
     const gesture = Math.max(...predict);
 
     const gestureIndex = predict.indexOf(gesture);
-    console.log(gestureIndex);
+    console.log(alphabets[gestureIndex]);
 
-    destroyAll(`${gestureIndex}`);
+    destroyAll(`${alphabets[gestureIndex]}`);
   }
   canvasCtx.restore();
 }
@@ -105,10 +107,8 @@ hands.setOptions({
 hands.onResults(onResults);
 
 async function loadModel() {
-  // https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_numbers_1-9/model.json
-  // https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_numbers_1-10/model.json
   customModel = await tf.loadLayersModel(
-    "https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_numbers_1-10/model.json"
+    "https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_alphabets_L-P/model.json"
   );
 }
 
@@ -129,15 +129,11 @@ kaboom({
 });
 
 // load a sprite "clouds" from an image
-loadSprite("1", "/assets/games/Numbers/1.png");
-loadSprite("2", "/assets/games/Numbers/2.png");
-loadSprite("3", "/assets/games/Numbers/3.png");
-loadSprite("4", "/assets/games/Numbers/4.png");
-loadSprite("5", "/assets/games/Numbers/5.png");
-loadSprite("6", "/assets/games/Numbers/6.png");
-loadSprite("7", "/assets/games/Numbers/7.png");
-loadSprite("8", "/assets/games/Numbers/8.png");
-loadSprite("9", "/assets/games/Numbers/9.png");
+loadSprite("L", "/assets/games/Alphabets/L.png");
+loadSprite("M", "/assets/games/Alphabets/M.png");
+loadSprite("N", "/assets/games/Alphabets/N.png");
+loadSprite("O", "/assets/games/Alphabets/O.png");
+loadSprite("P", "/assets/games/Alphabets/P.png");
 
 // async function init() {
 //   let bgImage = await loadSprite("background", "/assets/games/skic21.svg");
@@ -157,18 +153,17 @@ setInterval(() => {
   for (let int = 0; int < 4; int++) {
     let x = rand(0, width());
     let y = height();
-    let randomNum = Math.floor(rand(1, 10));
-
-    BALLOON_ON_SCREEN.push(randomNum);
+    let randomNum = Math.floor(rand(0, 5));
+    BALLOON_ON_SCREEN.push(alphabets[randomNum]);
 
     let balloon = add([
-      sprite(`${randomNum}`),
-      // text(`${randomNum}`),
+      // sprite("bean"),
+      text(`${alphabets[randomNum]}`),
       pos(x, y),
       area(),
-      scale(0.5),
-      // color(0, 0, 255),
-      `${randomNum}`
+      // scale(1.5),
+      color(0, 0, 255),
+      `${alphabets[randomNum]}`
     ]);
 
     balloon.onUpdate(() => {

@@ -6,6 +6,8 @@ const videoElement = document.querySelector("#video");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
+let alphabets = ["A", "B", "C", "D", "E", "F"];
+
 function calc_landmark_list(imgWidth, imgHeight, landmarks) {
   const landmarkArray = landmarks.map((landmark) => {
     const landmark_X = Math.round(Math.min(landmark.x * imgWidth, imgWidth - 1));
@@ -80,9 +82,12 @@ function onResults(results) {
     const gesture = Math.max(...predict);
 
     const gestureIndex = predict.indexOf(gesture);
-    console.log(gestureIndex);
+    console.log(alphabets[gestureIndex]);
 
-    destroyAll(`${gestureIndex}`);
+    destroyAll(`${alphabets[gestureIndex]}`);
+    SCORE += 1;
+    // destroyAll("scoreText");
+    // displayScore();
   }
   canvasCtx.restore();
 }
@@ -105,10 +110,8 @@ hands.setOptions({
 hands.onResults(onResults);
 
 async function loadModel() {
-  // https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_numbers_1-9/model.json
-  // https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_numbers_1-10/model.json
   customModel = await tf.loadLayersModel(
-    "https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_numbers_1-10/model.json"
+    "https://raw.githubusercontent.com/Narottam04/SignLanguage/master/frontend/model/asl_alphabets_A-F/model.json"
   );
 }
 
@@ -129,15 +132,12 @@ kaboom({
 });
 
 // load a sprite "clouds" from an image
-loadSprite("1", "/assets/games/Numbers/1.png");
-loadSprite("2", "/assets/games/Numbers/2.png");
-loadSprite("3", "/assets/games/Numbers/3.png");
-loadSprite("4", "/assets/games/Numbers/4.png");
-loadSprite("5", "/assets/games/Numbers/5.png");
-loadSprite("6", "/assets/games/Numbers/6.png");
-loadSprite("7", "/assets/games/Numbers/7.png");
-loadSprite("8", "/assets/games/Numbers/8.png");
-loadSprite("9", "/assets/games/Numbers/9.png");
+loadSprite("A", "/assets/games/Alphabets/A.png");
+loadSprite("B", "/assets/games/Alphabets/B.png");
+loadSprite("C", "/assets/games/Alphabets/C.png");
+loadSprite("D", "/assets/games/Alphabets/D.png");
+loadSprite("E", "/assets/games/Alphabets/E.png");
+loadSprite("F", "/assets/games/Alphabets/F.png");
 
 // async function init() {
 //   let bgImage = await loadSprite("background", "/assets/games/skic21.svg");
@@ -151,24 +151,29 @@ loadSprite("9", "/assets/games/Numbers/9.png");
 let SPEED = 4;
 let SCORE = 0;
 let LIVES = 10;
+let scoreText;
 let BALLOON_ON_SCREEN = [];
+
+const displayScore = () => {
+  // score counter
+  scoreText = add([text("Score: " + SCORE), scale(1), pos(width() - 200, 51), "scoreText"]);
+};
 
 setInterval(() => {
   for (let int = 0; int < 4; int++) {
     let x = rand(0, width());
     let y = height();
-    let randomNum = Math.floor(rand(1, 10));
-
-    BALLOON_ON_SCREEN.push(randomNum);
+    let randomNum = Math.floor(rand(0, 6));
+    BALLOON_ON_SCREEN.push(alphabets[randomNum]);
 
     let balloon = add([
-      sprite(`${randomNum}`),
-      // text(`${randomNum}`),
+      sprite(`${alphabets[randomNum]}`),
+      // text(`${alphabets[randomNum]}`),
       pos(x, y),
       area(),
       scale(0.5),
       // color(0, 0, 255),
-      `${randomNum}`
+      `${alphabets[randomNum]}`
     ]);
 
     balloon.onUpdate(() => {
@@ -176,3 +181,5 @@ setInterval(() => {
     });
   }
 }, 4000);
+
+// displayScore();
