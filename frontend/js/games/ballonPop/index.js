@@ -1,11 +1,23 @@
 
 // initialize kaboom context
-kaboom({
-  background: [255,255,255]
-});
+kaboom(
+//   {
+//   background: [255,255,255]
+// }
+);
 
 // load a sprite "bean" from an image
 loadSprite("bean", "https://img.icons8.com/color/48/null/heart-balloon--v1.png")
+
+async function init() {
+  let bgImage = await loadSprite("background", "https://source.unsplash.com/PEm_sLmJT-w");
+
+  let background = add([
+    sprite("background",{width: width(), height: height()}),
+  ]);
+}
+
+init();
 
 // define some game variable
 let SPEED = 2
@@ -17,7 +29,7 @@ setInterval(() => {
   for (let int = 0; int < 4; int++) {
     let x = rand(0, width());
     let y = height();
-    let randomNum = Math.floor(rand(0,10))
+    let randomNum = Math.floor(rand(1,10))
 
     BALLOON_ON_SCREEN.push(randomNum)
 
@@ -181,6 +193,3 @@ const camera = new Camera(videoElement, {
 });
 
 camera.start();
-
-
-console.log(BALLOON_ON_SCREEN)
