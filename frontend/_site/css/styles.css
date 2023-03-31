@@ -1166,6 +1166,10 @@ input:checked + .toggle-bg{
   z-index: 50;
 }
 
+.z-\[-100\]{
+  z-index: -100;
+}
+
 .z-30{
   z-index: 30;
 }

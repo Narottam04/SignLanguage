@@ -5,12 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="https://unpkg.com/kaboom@next/dist/kaboom.js"></script>
+    <script src="https://unpkg.com/kaboom/dist/kaboom.js"></script>
+    <!-- mediapipe and tensorflow library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <title>Ballon Popper ASL</title>
   </head>
   <body>
-    <canvas id="canvas" class="bg-green-400">Your browser doesn't support html5</canvas>
-
+    <div id="vid_container" class="z-[-100] hidden">
+      <video id="video" class="hidden" width="300" height="300" autoplay playsinline></video>
+      <canvas id="output-canvas" width="300" height="300"></canvas>
+      <div id="video_overlay"></div>
+    </div>
     <script src="/js/games/ballonPop/index.js"></script>
   </body>
 </html>
