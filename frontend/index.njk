@@ -49,5 +49,23 @@ layout: 'layouts/base.njk'
         
     </div>
 
-    {# <h1 class="py-6 rubik text-4xl font-bold" >ASL Games</h1> #}
+    <h1 class="py-6 rubik text-4xl font-bold" >ASL Games</h1>
+    {# cards #}
+    <div class="flex flex-wrap gap-4 mb-8">
+        {# import card from component folder #}
+        {% import 'components/cards.njk' as macro  %}
+        {# {{ macro.card('bg-[#E8B6D2]','/app/phrases/index.html','Learn Phrases','English-American Sign Language dictionary contains video for over 100,000 words.','/assets/img/youtube.png') }} #}
+        {{ macro.card('bg-[#A0A6FF]','/app/ballonPoppin/1-9/index.html','Numbers Game','Learn numbers from 1-9 in random order with the help of balloon popper game.','/assets/img/hell-yeah.png') }}
+
+        {{ macro.card('bg-[#72CAC3]','/app/ballonPoppin/a-f/index.html','Alphabets A-F Game','Learn alphabets from A-F in  random order with the help of balloon popper game.','/assets/img/ABC.png') }}
+
+        {{ macro.card('bg-[#F9DBBB]','/app/ballonPoppin/g-k/index.html','Alphabets G-K Game','Learn alphabets from G-K in  random order with the help of balloon popper game.','/assets/img/GHI.png') }}
+
+        {{ macro.card('bg-[#FDD36A]','/app/ballonPoppin/l-p/index.html','Alphabets L-P Game','Learn alphabets from L-P in  random order with the help of balloon popper game.','/assets/img/LMN.png') }}
+
+        {{ macro.card('bg-[#9DC08B]','/app/ballonPoppin/q-u/index.html','Alphabets Q-U Game','Learn alphabets from Q-U in  random order with the help of balloon popper game.','/assets/img/QRS.png') }}
+
+        {{ macro.card('bg-[#F7C8E0]','/app/ballonPoppin/v-z/index.html','Alphabets V-Z Game','Learn alphabets from V-Z in  random order with the help of balloon popper game.','/assets/img/VWX.png') }}
+        
+    </div>
 </section>

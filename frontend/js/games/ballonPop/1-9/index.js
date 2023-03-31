@@ -46,8 +46,8 @@ function preProcessLandmark(landmarks) {
 
 function onResults(results) {
   // Get Video Properties
-  const videoWidth = videoElement.videoWidth;
-  const videoHeight = videoElement.videoHeight;
+  const videoWidth = 300;
+  const videoHeight = 200;
 
   // Set video width and height
   canvasElement.width = videoWidth;
@@ -131,7 +131,15 @@ kaboom({
 });
 
 // load a sprite "clouds" from an image
-// loadSprite("bean", "/assets/games/voodoo_cactus_island.svg");
+loadSprite("1", "/assets/games/Numbers/1.png");
+loadSprite("2", "/assets/games/Numbers/2.png");
+loadSprite("3", "/assets/games/Numbers/3.png");
+loadSprite("4", "/assets/games/Numbers/4.png");
+loadSprite("5", "/assets/games/Numbers/5.png");
+loadSprite("6", "/assets/games/Numbers/6.png");
+loadSprite("7", "/assets/games/Numbers/7.png");
+loadSprite("8", "/assets/games/Numbers/8.png");
+loadSprite("9", "/assets/games/Numbers/9.png");
 
 // async function init() {
 //   let bgImage = await loadSprite("background", "/assets/games/skic21.svg");
@@ -142,7 +150,7 @@ kaboom({
 // init();
 
 // define some game variable
-let SPEED = 2;
+let SPEED = 4;
 let SCORE = 0;
 let LIVES = 10;
 let BALLOON_ON_SCREEN = [];
@@ -156,12 +164,12 @@ setInterval(() => {
     BALLOON_ON_SCREEN.push(randomNum);
 
     let balloon = add([
-      // sprite("bean"),
-      text(`${randomNum}`),
+      sprite(`${randomNum}`),
+      // text(`${randomNum}`),
       pos(x, y),
       area(),
-      // scale(1.5),
-      color(0, 0, 255),
+      scale(0.5),
+      // color(0, 0, 255),
       `${randomNum}`
     ]);
 

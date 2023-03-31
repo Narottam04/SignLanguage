@@ -2333,3 +2333,9 @@ input:checked + .toggle-bg{
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
+
+@media (min-width: 1024px){
+  .lg\:right-0{
+    right: 0px;
+  }
+}
