@@ -1166,6 +1166,10 @@ input:checked + .toggle-bg{
   z-index: 50;
 }
 
+.z-\[-100\]{
+  z-index: -100;
+}
+
 .z-30{
   z-index: 30;
 }
@@ -1676,11 +1680,6 @@ input:checked + .toggle-bg{
 
 .bg-black\/40{
   background-color: rgb(0 0 0 / 0.4);
-}
-
-.bg-green-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
 }
 
 .bg-gray-100{

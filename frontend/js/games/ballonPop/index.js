@@ -45,6 +45,8 @@ const videoElement = document.querySelector("#video");
 const canvasElement = document.querySelector("#output-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
+
+
 // Incremental Numbers
 let number = 0;
 
@@ -123,6 +125,10 @@ function onResults(results) {
 
     const gestureIndex = predict.indexOf(gesture);
     console.log(gestureIndex);
+
+    if(gestureIndex){
+      destroyAll(`${gestureIndex}`)
+    }
 
 
   }
