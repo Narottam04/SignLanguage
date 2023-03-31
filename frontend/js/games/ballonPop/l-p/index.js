@@ -157,12 +157,12 @@ setInterval(() => {
     BALLOON_ON_SCREEN.push(alphabets[randomNum]);
 
     let balloon = add([
-      // sprite("bean"),
-      text(`${alphabets[randomNum]}`),
+      sprite(`${alphabets[randomNum]}`),
+      // text(`${alphabets[randomNum]}`),
       pos(x, y),
       area(),
-      // scale(1.5),
-      color(0, 0, 255),
+      scale(0.5),
+      // color(0, 0, 255),
       `${alphabets[randomNum]}`
     ]);
 
