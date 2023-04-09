@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.webdrip.signlanguage.twa",
+      "sha256_cert_fingerprints": [
+        "C9:52:F9:BA:F6:35:9C:FD:56:36:06:B7:63:21:00:72:30:30:9E:AE:62:D4:E6:87:30:EF:47:BD:5A:21:3F:3A"
+      ]
+    }
+  }
+]

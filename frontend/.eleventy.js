@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./assets");
   eleventyConfig.addPassthroughCopy("./sw.js");
   eleventyConfig.addPassthroughCopy("./manifest.json");
+  eleventyConfig.addPassthroughCopy("./.well-known");
   eleventyConfig.addPassthroughCopy("./js");
   eleventyConfig.addPassthroughCopy("./utils");
   eleventyConfig.addPassthroughCopy({

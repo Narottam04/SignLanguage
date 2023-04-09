@@ -1,8 +1,9 @@
 {
   "name": "SignLanguage",
   "short_name": "SignLanguage",
-  "start_url": "https://signlanguage.webdrip.in/",
   "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
   "description": "Learn ASL Practically.",
   "lang": "English",
   "dir": "auto",
