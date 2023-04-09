@@ -4,6 +4,8 @@ module.exports = function (eleventyConfig) {
     "node_modules/flowbite/dist/flowbite.js": "js/flowbite.js"
   });
   eleventyConfig.addPassthroughCopy("./assets");
+  eleventyConfig.addPassthroughCopy("./sw.js");
+  eleventyConfig.addPassthroughCopy("./manifest.json");
   eleventyConfig.addPassthroughCopy("./js");
   eleventyConfig.addPassthroughCopy("./utils");
   eleventyConfig.addPassthroughCopy({

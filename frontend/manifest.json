@@ -1,0 +1,68 @@
+{
+  "name": "SignLanguage",
+  "short_name": "SignLanguage",
+  "start_url": "https://signlanguage.webdrip.in/",
+  "display": "standalone",
+  "description": "Learn ASL Practically.",
+  "lang": "English",
+  "dir": "auto",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/assets/logo/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logo/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/screenshots/1280x800-screenshot.png",
+      "sizes": "1280x800",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/screenshots/screenshots/750x1334-screenshot.png",
+      "sizes": "750x1334",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/screenshots/screenshots/1280x800-screenshot1.png",
+      "sizes": "1280x800",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/screenshots/screenshots/750x1334-screenshot1.png",
+      "sizes": "750x1334",
+      "type": "image/png"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "SignLanguage",
+      "url": "https://signlanguage.webdrip.in/",
+      "description": "SignLanguage: Learn ASL Practically"
+    }
+  ]
+}

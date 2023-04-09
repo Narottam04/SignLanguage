@@ -17,12 +17,18 @@
     <meta property="og:site_name" content="SignLanguage"/>
     <meta property="og:type" content="ASL,Education,Courses,Learning,Machine Learning, ML, AI, Deaf Community,deaf, sign language"/>
     <meta name="language" content="EN"/>
+    <link rel="manifest" href="/manifest.json">
     <meta name="author" content="Narottam Sahu, Avirat Sudam, Aman Shrivastava, Prathamesh Raut"/>
     {# analytics - privacy and GDPR Compliant #}
-    {# <script async defer data-website-id="b315f6d5-10e5-4c26-a781-d3113658dae7" src="https://analytics.webdrip.in/umami.js"></script> #}
+    <script async defer data-website-id="b315f6d5-10e5-4c26-a781-d3113658dae7" src="https://analytics.webdrip.in/umami.js"></script>
 </head>
 <body class="bg-[#ECF3F5]" >
     {{content | safe}}
 </body>
 <script src="{{ "/js/flowbite.js" | url }}" defer></script>
+{# <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script> #}
 </html>
