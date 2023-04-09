@@ -12,48 +12,48 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/assets/logo/manifest-icon-192.maskable.png",
-      "sizes": "192x192",
+      "src": "https://signlanguage.webdrip.in/assets/logo/signlanguage-48x48.png",
+      "sizes": "48x48",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/logo/manifest-icon-192.maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/assets/logo/manifest-icon-512.maskable.png",
-      "sizes": "512x512",
+      "src": "https://signlanguage.webdrip.in/assets/logo/signlanguage-72x72.png",
+      "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/logo/manifest-icon-512.maskable.png",
-      "sizes": "512x512",
+      "src": "https://signlanguage.webdrip.in/assets/logo/signlanguage-96x96.png",
+      "sizes": "96x96",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "https://signlanguage.webdrip.in/assets/logo/signlanguage-120x120.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "assets/screenshots/screenshots/1280x800-screenshot.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/1280x800-screenshot.png",
       "sizes": "1280x800",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshots/750x1334-screenshot.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/750x1334-screenshot.png",
       "sizes": "750x1334",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshots/1280x800-screenshot1.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/1280x800-screenshot1.png",
       "sizes": "1280x800",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshots/750x1334-screenshot1.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/750x1334-screenshot1.png",
       "sizes": "750x1334",
       "type": "image/png"
     }

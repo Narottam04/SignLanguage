@@ -34,29 +34,26 @@
       "sizes": "120x120",
       "type": "image/png",
       "purpose": "any"
-    },
-    
-
-    
+    }
   ],
   "screenshots": [
     {
-      "src": "assets/screenshots/screenshots/1280x800-screenshot.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/1280x800-screenshot.png",
       "sizes": "1280x800",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshots/750x1334-screenshot.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/750x1334-screenshot.png",
       "sizes": "750x1334",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshots/1280x800-screenshot1.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/1280x800-screenshot1.png",
       "sizes": "1280x800",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshots/750x1334-screenshot1.png",
+      "src": "https://signlanguage.webdrip.in/assets/screenshots/screenshots/750x1334-screenshot1.png",
       "sizes": "750x1334",
       "type": "image/png"
     }
