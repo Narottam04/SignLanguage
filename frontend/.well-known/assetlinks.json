@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "in.webdrip.signlanguage.twa",
+      "package_name": "in.webdrip.gestureacademy.twa",
       "sha256_cert_fingerprints": [
-        "C9:52:F9:BA:F6:35:9C:FD:56:36:06:B7:63:21:00:72:30:30:9E:AE:62:D4:E6:87:30:EF:47:BD:5A:21:3F:3A"
+        "45:BB:33:A8:76:3E:FB:D5:BE:C8:74:83:51:4E:0B:9D:44:29:E2:B3:E1:85:C7:90:06:22:EB:6C:AB:E4:3C:3C"
       ]
     }
   }
