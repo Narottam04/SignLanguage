@@ -7,7 +7,7 @@
 
 
 ### App Link 🎉🎉🥳
-https://signlanguage.webdrip.in/
+https://gestureacademy.webdrip.in/
 
 ### App Previews & Features
 
